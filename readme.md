@@ -5,11 +5,10 @@ This repository contains my lecture notes of Graph Theory Topic. The notes mostl
 **Table of Contents**
 - [Lecture 1](#lecture-1)
     - [Graph Definition](#graph-definition)
-    - [Graph Types](#graph-types)
+    - [Basic Graph Types](#basic-graph-types)
     - [Key Relationships](#key-relationships)
-      - [Degree-Sum Formula (Lemma 2.2.1)](#degree-sum-formula-lemma-221)
-        - [Key Implications](#key-implications)
-      - [Corollary (Lemma 2.2.2)](#corollary-lemma-222)
+      - [Maximum and Minimum Degree](#maximum-and-minimum-degree)
+      - [Regular Graphs](#regular-graphs)
 - [Lecture 2](#lecture-2)
 
 # Lecture 1
@@ -38,7 +37,7 @@ Chapter 2: Basic Graph Terminologies from the textbook Basic Graph Theory by Md.
 
 
 
-### Graph Types
+### Basic Graph Types
 
 - **Simple graph**: No loops or multiple edges
 <p align="center" id="2.1">
@@ -57,10 +56,12 @@ Chapter 2: Basic Graph Terminologies from the textbook Basic Graph Theory by Md.
 - **Directed graph (digraph)**: Edges have direction
 - **Weighted graph**: Weights assigned to vertices/edges
 <p align="center">
-    <img src="Media\Lecture1\directed_and_weighter_graph.png" width="" /> <br/>
-    <em>Fig 2.3: Directed graph and Weighted graph</em>
+    <img src="Media\Lecture1\directed_and_weighter_graph.png" width="" /
+    > <br/>
+    <img src="Media\Lecture1\vertice_weighted_graph.png" width="" /
+    > <br/>
+    <em>Fig 2.3: Directed graph, Edge-Weighted graph and Vertice-weighted graph</em>
 </p>
-
 
 ### Key Relationships
 
@@ -71,48 +72,121 @@ Chapter 2: Basic Graph Terminologies from the textbook Basic Graph Theory by Md.
     - Number of edges incident to $v$
     - Loops count twice
     - Example: $deg(v_1) = 5$ in <a href="#2.1">Fig. 2.1</a>
+  
+---
 
-#### Degree-Sum Formula (Lemma 2.2.1)
-
-- **Statement**: For any graph $G = (V, E)$ with $m$ edges, the sum of all vertex degrees equals $2m$:
+**Corollary 2.2.1: Degree-Sum Formula**: For any graph $G = (V, E)$ with $m$ edges, the sum of all vertex degrees equals $2m$: <br>
 
 $$
 \sum_{v \in V} \deg(v) = 2m
 $$
+
+<br>
+
 - **Proof**:
     - Each **non-loop edge** connects two distinct vertices → contributes 1 to the degree of two vertices (total +2).
     - Each **loop edge** connects a vertex to itself → counted twice in that vertex's degree (total +2).
     - Thus, every edge adds exactly 2 to the total degree sum.
 
-
-##### Key Implications
-
 - Also called the **"First Theorem of Graph Theory"** or **"Handshaking Lemma"**:
     - Analogous to handshakes: Each handshake involves two people → total handshakes must be even.
 - **Why it matters**: Provides a fundamental relationship between vertex degrees and edge count.
 
+---
 
-#### Corollary (Lemma 2.2.2)
-
-- **Statement**: Every graph has an **even number of odd-degree vertices**.
+**Corollary 2.2.2**: Every graph has an **even number of odd-degree vertices**. <br>
 - **Proof**:
     - Let $x$ = sum of even-degree vertices (even).
     - Let $y$ = sum of odd-degree vertices.
     - By Lemma 2.2.1: $x + y = 2m$ (even).
     - Since $x$ is even, $y = 2m - x$ must also be even.
-    - For $y$ (sum of odd numbers) to be even, the *number of odd-degree vertices* must be even[^1].
+    - For $y$ (sum of odd numbers) to be even, the *number of odd-degree vertices* must be even.
 
-- **Example**: In a graph with 5 vertices:
-    - Degrees: {2, 2, 3, 3, 4} (sum = 14 → $2m = 14$ → $m = 7$ edges).
+- **Example**: In the following graph with 5 vertices:
+    - Degrees of each node: {1→2, 2→2, 3→3, 4→3, 5→4}
+    - Summation of the degrees of the vertices = $7*2 = 14$
     - Odd-degree vertices: two (3 and 3), which is even.
-  
+<p align="center">
+    <img src="Media\Lecture1\example_graph.png" width="" />
+</p>
+
+---
+
+#### Maximum and Minimum Degree
+
+- **Maximum degree (Δ(G))**: The highest number of edges connected to any single vertex in the graph.
+    - *Example*: In <a href="#2.1">Fig. 2.1</a>, Δ(G) = 5 (vertex v<sub>1</sub> has the highest degree).
+- **Minimum degree (δ(G))**: The lowest number of edges connected to any vertex.
+    - *Example*: In <a href="#2.1">Fig. 2.1</a>, δ(G) = 1 (e.g., vertex v<sub>8</sub> with only one edge).
+- **Average degree**: For a graph with $n$ vertices and $m$ edges, the average degree is $\frac{2m}{n}$.
+    - *Why?*: Sum of all degrees is $2m$ (Degree-Sum Formula), so average is total divided by $n$.
+    - *Key inequality*: $\delta(G) \leq \frac{2m}{n} \leq \Delta(G)$.
+
+
+#### Regular Graphs
+
+A graph is **regular** if all vertices have the *same degree*. Specific types include:
+
+- **k-regular graphs**: Every vertex has degree $k$.
+    - **0-regular**: No edges (isolated vertices).
+    - **1-regular**: Disjoint edges (no shared vertices), like a matching.
+    - **2-regular**: Consists of cycles (e.g., Fig. 2.4a).
+        - *Simple cycle*: Vertices form a closed loop (e.g., triangle, square).
+    - **3-regular (cubic graphs)**:
+        - Widely known as ***Petersen graph*** (Fig. 2.4b): 10 vertices, 15 edges.
+        - It is a small, simple-looking graph that breaks a lot of the usual rules in graph theory. It is often used as a "counterexample"
+    - **5-regular**:
+        - *Doughnut graphs* (Fig. 2.4d): $4p$ vertices for parameter $p$.
+    - **d-dimensional hypercube** (Fig. 2.4c):
+        - $2^d$ vertices, each of degree $d$.
+        - *Example*: 4D hypercube has 16 vertices, each connected to 4 others.
+
+<p align="center">
+    <img src="Media\Lecture1\k_regular_graphs.png" width="" />
+</p>
+
+---
+
+**Corollary 2.2.3:** Every regular graph with an odd degree has an even number of vertices. <br>
+- **Proof**:
+  - **Handshaking Lemma**: In any graph, the sum of all vertex degrees equals twice the number of edges. This sum is always **even** because it's $2 \times \text{edges}$
+  - **Regular graph property**: If a graph is $k$-regular, every vertex has degree $k$. Thus, the sum of degrees is $n \times k$ (where $n = \text{number of vertices}$).
+  - **Odd $k$ constraint**: If $k$ is odd, then $n \times k$ must be even (per the handshaking lemma).
+  - **Key insight**: An odd number ($k$) multiplied by another number ($n$) only gives an even result if $n$ is **even**. Thus, $n$ must be even when $k$ is odd.
+
+**Example**:
+
+- A 3-regular graph (cubic graph) with an odd degree must have an even number of vertices (e.g., the Petersen graph has 10 vertices).
+
+<p align="center">
+    <img src="Media\Lecture1\The-Petersen-graph.png" width="300" /> <br>
+    <em>Petersen graph</em>
+</p>
+
+
+---
+
+**Corollary 2.2.4:** A $k$-regular graph with $n$ vertices has $\frac{nk}{2}$ edges. <br>
+
+- **Sum of degrees**: In a $k$-regular graph, the sum of all vertex degrees is $n \times k$ (since each of $n$ vertices has degree $k$).
+- **Handshaking Lemma**: This sum also equals $2 \times \text{edges}$ (denoted $2e$).
+- **Equation**: $n \times k = 2e$.
+- **Solve for edges**: Rearrange to get $e = \frac{n \times k}{2}$.
+
+**Example**:
+
+- A 3-regular graph with 4 vertices has $\frac{4 \times 3}{2} = 6$ edges
+<p align="center">
+    <img src="Media\Lecture1\example_2.2.4.png" width="" />
+</p>
+
 
 <!-- <div style="text-align: center">⁂</div> -->
 
 
 
 # Lecture 2
-
+To be added
 
 
 

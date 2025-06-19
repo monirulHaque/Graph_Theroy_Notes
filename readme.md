@@ -4,6 +4,13 @@ This repository contains my lecture notes of Graph Theory Topic. The notes mostl
 -------------------------------------------------------------------------
 **Table of Contents**
 - [Lecture 1](#lecture-1)
+    - [Graph Definition](#graph-definition)
+    - [Graph Types](#graph-types)
+    - [Key Relationships](#key-relationships)
+      - [Degree-Sum Formula (Lemma 2.2.1)](#degree-sum-formula-lemma-221)
+        - [Key Implications](#key-implications)
+      - [Corollary (Lemma 2.2.2)](#corollary-lemma-222)
+- [Lecture 2](#lecture-2)
 
 # Lecture 1
 
@@ -34,9 +41,9 @@ Chapter 2: Basic Graph Terminologies from the textbook Basic Graph Theory by Md.
 ### Graph Types
 
 - **Simple graph**: No loops or multiple edges
-<p align="center">
+<p align="center" id="2.1">
     <img src="Media\Lecture1\simple_graph.png" width="" /> <br/>
-    <em>A simple graph with 11 vertices and 17 edges</em>
+    <em>Fig 2.1: A simple graph with 11 vertices and 17 edges</em>
 </p>
 
 - **Multigraph**: May contain,
@@ -44,13 +51,14 @@ Chapter 2: Basic Graph Terminologies from the textbook Basic Graph Theory by Md.
     - **Multiple edges**: More than 1 edges sharing the same vertex pair
 <p align="center">
     <img src="Media\Lecture1\multi_graph.png" width="" /> <br/>
-    <em>A multigraph having loops and multiple edges between the same pair of vertices</em>
+    <em> Fig 2.2: A multigraph having loops and multiple edges between the same pair of vertices</em>
 </p>
 
 - **Directed graph (digraph)**: Edges have direction
 - **Weighted graph**: Weights assigned to vertices/edges
 <p align="center">
     <img src="Media\Lecture1\directed_and_weighter_graph.png" width="" /> <br/>
+    <em>Fig 2.3: Directed graph and Weighted graph</em>
 </p>
 
 
@@ -62,7 +70,7 @@ Chapter 2: Basic Graph Terminologies from the textbook Basic Graph Theory by Md.
 - **Degree** ($deg(v)$):
     - Number of edges incident to $v$
     - Loops count twice
-    - Example: $deg(v_1) = 5$ in Fig. 2.1
+    - Example: $deg(v_1) = 5$ in <a href="#2.1">Fig. 2.1</a>
 
 #### Degree-Sum Formula (Lemma 2.2.1)
 
@@ -74,13 +82,13 @@ $$
 - **Proof**:
     - Each **non-loop edge** connects two distinct vertices → contributes 1 to the degree of two vertices (total +2).
     - Each **loop edge** connects a vertex to itself → counted twice in that vertex's degree (total +2).
-    - Thus, every edge adds exactly 2 to the total degree sum[^1].
+    - Thus, every edge adds exactly 2 to the total degree sum.
 
 
 ##### Key Implications
 
 - Also called the **"First Theorem of Graph Theory"** or **"Handshaking Lemma"**:
-    - Analogous to handshakes: Each handshake involves two people → total handshakes must be even[^1].
+    - Analogous to handshakes: Each handshake involves two people → total handshakes must be even.
 - **Why it matters**: Provides a fundamental relationship between vertex degrees and edge count.
 
 
@@ -94,17 +102,16 @@ $$
     - Since $x$ is even, $y = 2m - x$ must also be even.
     - For $y$ (sum of odd numbers) to be even, the *number of odd-degree vertices* must be even[^1].
 
-
-##### Example
-
-- In a graph with 5 vertices:
+- **Example**: In a graph with 5 vertices:
     - Degrees: {2, 2, 3, 3, 4} (sum = 14 → $2m = 14$ → $m = 7$ edges).
     - Odd-degree vertices: two (3 and 3), which is even.
+  
 
-<div style="text-align: center">⁂</div>
+<!-- <div style="text-align: center">⁂</div> -->
 
 
 
+# Lecture 2
 
 
 

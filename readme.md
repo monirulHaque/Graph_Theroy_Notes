@@ -52,6 +52,7 @@ Chapter 2: Basic Graph Terminologies from the textbook Basic Graph Theory by Md.
 ### Basic Graph Types
 
 - **Simple graph**: No loops or multiple edges
+
 <p align="center" id="2.1">
     <img src="Media\Lecture1\simple_graph.png" width="" /> <br/>
     <em>Fig 2.1: A simple graph with 11 vertices and 17 edges</em>
@@ -60,6 +61,7 @@ Chapter 2: Basic Graph Terminologies from the textbook Basic Graph Theory by Md.
 - **Multigraph**: May contain,
     - **Loops**: Edges with identical end-vertices
     - **Multiple edges**: More than 1 edges sharing the same vertex pair
+
 <p align="center">
     <img src="Media\Lecture1\multi_graph.png" width="" /> <br/>
     <em> Fig 2.2: A multigraph having loops and multiple edges between the same pair of vertices</em>
@@ -67,6 +69,7 @@ Chapter 2: Basic Graph Terminologies from the textbook Basic Graph Theory by Md.
 
 - **Directed graph (digraph)**: Edges have direction
 - **Weighted graph**: Weights assigned to vertices/edges
+  
 <p align="center">
     <img src="Media\Lecture1\directed_and_weighter_graph.png" width="" /
     > <br/>
@@ -124,6 +127,7 @@ $$
     - Degrees of each node: {1→2, 2→2, 3→3, 4→3, 5→4}
     - Summation of the degrees of the vertices = $7*2 = 14$
     - Odd-degree vertices: two (3 and 3), which is even.
+  
 <p align="center">
     <img src="Media\Lecture1\example_graph.png" width="" />
 </p>
@@ -202,6 +206,7 @@ A graph is **regular** if all vertices have the *same degree*. Specific types in
   - **Solve for edges**: Rearrange to get $e = \frac{n \times k}{2}$.
 <br>
 - **Example**: A 3-regular graph with 4 vertices has $\frac{4 \times 3}{2} = 6$ edges
+
 <p align="center">
     <img src="Media\Lecture1\example_2.2.4.png" width="" />
 </p>

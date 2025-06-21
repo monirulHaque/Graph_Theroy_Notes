@@ -15,12 +15,12 @@ This repository contains my lecture notes of Graph Theory Topic. The notes mostl
     - [Corollary 2.2.4](#corollary-224)
     - [Subgraphs](#subgraphs)
     - [Key Graph Classes](#key-graph-classes)
-      - [1. **Null Graphs**](#1-null-graphs)
-      - [2. **Complete Graphs**](#2-complete-graphs)
-      - [3. **Bipartite Graphs**](#3-bipartite-graphs)
-      - [4. **Path Graphs**](#4-path-graphs)
-      - [5. **Cycle Graphs**](#5-cycle-graphs)
-      - [6. **Wheel Graphs**](#6-wheel-graphs)
+      - [1. Null Graphs](#1-null-graphs)
+      - [2. Complete Graphs](#2-complete-graphs)
+      - [3. Bipartite Graphs](#3-bipartite-graphs)
+      - [4. Path Graphs](#4-path-graphs)
+      - [5. Cycle Graphs](#5-cycle-graphs)
+      - [6. Wheel Graphs](#6-wheel-graphs)
 - [Lecture 2](#lecture-2)
 
 # Chapter 1
@@ -234,13 +234,13 @@ A graph is **regular** if all vertices have the *same degree*. Specific types in
 
 ### Key Graph Classes
 
-#### 1. **Null Graphs**
+#### 1. Null Graphs
 
 - Graphs with **no edges** (empty edge set). (Notation: $N_n$)
 - Every null graph is a subgraph of any graph with the same number of vertices.
 
 
-#### 2. **Complete Graphs**
+#### 2. Complete Graphs
 -  Every pair of distinct vertices is **directly connected** by an edge. (Notation: $N_n$)
 - **Edge Count** =  $\frac{n(n-1)}{2}$ edges.
 - All graphs are subgraphs of $K_n$ with the same vertex count.
@@ -249,7 +249,7 @@ A graph is **regular** if all vertices have the *same degree*. Specific types in
     <img src="Media\Lecture1\null_graph and complete_graph.png" width="" />
 </p>
 
-#### 3. **Bipartite Graphs**
+#### 3. Bipartite Graphs
 
 - If vertex set can be split into **two independent sets**/partite sets, the graph is called bipartite graph. Edges **only cross** between the two sets.
   - **Independent Set**: A vertex subset where **no two vertices are adjacent** (no edges between them)
@@ -271,19 +271,19 @@ A graph is **regular** if all vertices have the *same degree*. Specific types in
     <em>K<sub>3,4</sub> complete bipartite graph</em>
 </p>
 
-#### 4. **Path Graphs**
+#### 4. Path Graphs
 
 - Vertices arranged in a **linear sequence** with edges only between consecutive vertices. $P_n$ (e.g., $P_6$ has 6 vertices, Fig. 2.9a).
 - **Degrees**:
     - End vertices: degree 1.
     - Internal vertices: degree 2.
 
-#### 5. **Cycle Graphs**
+#### 5. Cycle Graphs
 
 - **Definition**: Path graphs where **first and last vertices are connected** (closed loop).
 - **Notation**: $C_n$ (e.g., $C_6$ has 6 vertices, all degree 2, Fig. 2.9b).
 
-#### 6. **Wheel Graphs**
+#### 6. Wheel Graphs
 
 - **Definition**: A **cycle graph $C_{n-1}$** + a **central vertex $w$** connected to all cycle vertices.
 - **Notation**: $W_n$ (e.g., $W_7$ has 6 cycle vertices + 1 central vertex, Fig. 2.9c).

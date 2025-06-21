@@ -175,7 +175,7 @@ A graph is **regular** if all vertices have the *same degree*. Specific types in
 ---
 
 ### Corollary 2.2.3
-**Statement** Every regular graph with an odd degree has an even number of vertices. <br>
+**Statement**: Every regular graph with an odd degree has an even number of vertices. <br>
 - **Proof**:
   - **Handshaking Lemma**: In any graph, the sum of all vertex degrees equals twice the number of edges. This sum is always **even** because it's $2 \times \text{edges}$
   - **Regular graph property**: If a graph is $k$-regular, every vertex has degree $k$. Thus, the sum of degrees is $n \times k$ (where $n = \text{number of vertices}$).
@@ -198,7 +198,7 @@ A graph is **regular** if all vertices have the *same degree*. Specific types in
 ---
 
 ### Corollary 2.2.4
-**Statement:** A $k$-regular graph with $n$ vertices has $\frac{nk}{2}$ edges. <br>
+**Statement**: A $k$-regular graph with $n$ vertices has $\frac{nk}{2}$ edges. <br>
 - **Proof**:
   - **Sum of degrees**: In a $k$-regular graph, the sum of all vertex degrees is $n \times k$ (since each of $n$ vertices has degree $k$).
   - **Handshaking Lemma**: This sum also equals $2 \times \text{edges}$ (denoted $2e$).

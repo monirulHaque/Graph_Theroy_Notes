@@ -21,7 +21,7 @@ This repository contains my lecture notes of Graph Theory Topic. The notes mostl
       - [4. Path Graphs](#4-path-graphs)
       - [5. Cycle Graphs](#5-cycle-graphs)
       - [6. Wheel Graphs](#6-wheel-graphs)
-- [Lecture 2](#lecture-2)
+- [Chapter 3](#chapter-3)
 
 # Chapter 2
 
@@ -296,7 +296,7 @@ A graph is **regular** if all vertices have the *same degree*. Specific types in
 
 
 
-# Lecture 2
+# Chapter 3
 To be added
 
 

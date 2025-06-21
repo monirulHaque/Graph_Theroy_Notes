@@ -3,7 +3,7 @@ This repository contains my lecture notes of Graph Theory Topic. The notes mostl
 
 -------------------------------------------------------------------------
 **Table of Contents**
-- [Chapter 1](#chapter-1)
+- [Chapter 2](#chapter-2)
     - [Graph Definition](#graph-definition)
     - [Basic Graph Types](#basic-graph-types)
     - [Key Relationships](#key-relationships)
@@ -23,7 +23,7 @@ This repository contains my lecture notes of Graph Theory Topic. The notes mostl
       - [6. Wheel Graphs](#6-wheel-graphs)
 - [Lecture 2](#lecture-2)
 
-# Chapter 1
+# Chapter 2
 
 Chapter 2: Basic Graph Terminologies from the textbook Basic Graph Theory by Md. Saidur Rahman.
 

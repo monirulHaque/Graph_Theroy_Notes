@@ -83,7 +83,7 @@ Chapter 2: Basic Graph Terminologies from the textbook Basic Graph Theory by Md.
 - **Adjacency**: Vertices $u$ and $v$ are adjacent if connected by an edge
 - **Incidence**: Edge $e = (u,v)$ is incident to vertices $u$ and $v$
 - **Neighbors**: Vertices adjacent to a given vertex $v$
-- **Degree** ($deg(v)$):
+- **Degree** ( $deg(v)$ ):
     - Number of edges incident to $v$
     - Loops count twice
     - Example: $deg(v_1) = 5$ in <a href="#2.1">Fig. 2.1</a>
@@ -103,8 +103,10 @@ $$
     - Each **non-loop edge** connects two distinct vertices → contributes 1 to the degree of two vertices (total +2).
     - Each **loop edge** connects a vertex to itself → counted twice in that vertex's degree (total +2).
     - Thus, every edge adds exactly 2 to the total degree sum.
+
 <br>
-- Also called **the Degree-Sum Formula**, **"First Theorem of Graph Theory"** or **"Handshaking Lemma"**:
+
+- Also called **"the Degree-Sum Formula"**, **"First Theorem of Graph Theory"** or **"Handshaking Lemma"** :
     - Analogous to handshakes: Each handshake involves two people → total handshakes must be even.
 - Why it matters and it's applications: 
   - Provides a fundamental relationship between vertex degrees and edge count.
@@ -124,7 +126,7 @@ $$
     - For $y$ (sum of odd numbers) to be even, the *number of odd-degree vertices* must be even.
 <br>
 - **Example**: In the following graph with 5 vertices:
-    - Degrees of each node: {1→2, 2→2, 3→3, 4→3, 5→4}
+    - Degrees of each node: {0→2, 1→2, 2→3, 3→3, 4→4}
     - Summation of the degrees of the vertices = $7*2 = 14$
     - Odd-degree vertices: two (3 and 3), which is even.
   

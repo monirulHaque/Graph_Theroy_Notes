@@ -124,7 +124,9 @@ $$
     - By Lemma 2.2.1: $x + y = 2m$ (even).
     - Since $x$ is even, $y = 2m - x$ must also be even.
     - For $y$ (sum of odd numbers) to be even, the *number of odd-degree vertices* must be even.
+
 <br>
+
 - **Example**: In the following graph with 5 vertices:
     - Degrees of each node: {0→2, 1→2, 2→3, 3→3, 4→4}
     - Summation of the degrees of the vertices = $7*2 = 14$

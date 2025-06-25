@@ -303,7 +303,197 @@ A graph is **regular** if all vertices have the *same degree*. Specific types in
     <em>Path graph, Cycle graph and Wheel graph</em>
 </p>
 
+### Operations on Graphs
+Let G₁ = (V₁, E₁) and G₂ = (V₂, E₂) be two graphs.
 
+#### Union of Graphs
+(G₁ ∩ G₂) = The resulting graph will contain all the vertices and edges of both graphs.
+
+#### Intersection of Graphs
+(G₁ ∪ G₂) = The resulting graph will contain only the vertices and edges that are present in both graphs. <br>
+
+
+<p align="center">
+    <img src="Media\Lecture2\union_and_intersection.png" width="" /> <br>
+    <em>Union and Intersection Example</em>
+</p>
+
+
+**Example 1**: Imagine two social networks - Facebook friends and Instagram followers. The union would show all your connections across both platforms, while the intersection would show only people who follow you on both platforms. <br>
+
+<p align="center">
+    <img src="Media\Lecture2\union_intersection_example2.png" width="" /> <br>
+    <em>Union and Intersection Practical Example</em>
+</p>
+
+**Example 2**: Suppose there are h + g people in a party; h of them are hosts and g of them are
+guests. Each person shakes hands with each other except that no host shakes hands
+with any other host. The problem is to find the total number of handshakes. As usual,
+we transform the scenario into a graph problem as follows. We form a graph with
+h + g vertices; h of them are black vertices, representing the hosts and the other
+g vertices are white, representing the guests. The edges of the graph represent the
+handshakes. Thus, there is an edge between every pair of vertices except for that there
+is no edge between any pair of black vertices. Thus, the problem now is to count the
+number of edges in the graph thus formed. The graph is illustrated for h = 3 and
+g = 4 in Fig. 2.11(a). <br>
+To solve the problem, we note that the graph can be thought of as a union of two
+graphs: a complete graph Kg and a complete bipartite graph Kh,g as illustrated in
+Fig. 2.11(b). Since there is no common edge between the two graphs, their intersection contains no edges. Thus, the total number of edges in the graph (i.e., the total
+number of handshakes in the party) is n(n − 1)/2 + m × n <br>
+
+#### Complement of Graphs
+For a graph h G = (V, E) the complement graph is Ḡ = (V,  Ē) where Ē(G) = E(K<sub>V</sub>) - E(G) 
+
+- A null graph
+is the complement of the complete graph with the same number of vertices and vice
+versa.
+
+<p align="center">
+    <img src="Media\Lecture2\complement_graph.png" width="" /> <br>
+</p>
+
+#### Corollary 2.5.1
+
+**Statement:** For any graph G with 6 vertices, either G or Ḡ contains a triangle (3-cycle). (Also called Ramsey's Triangle Theory) <br>
+
+**Proof:**
+
+- Choose any vertex v in the 6-vertex graph G
+- v can connect to at most 5 other vertices (since there are 6 vertices total)
+- Pigeonhole Principle: v must have at least 3 neighbors in either G or Ḡ
+- If v has fewer than 3 neighbors in G, it has at least 3 neighbors in Ḡ
+- Case Analysis: Assume v has three neighbors x, y, z in G
+
+    - Case 1: If any two of {x, y, z} are connected in G → triangle found in G
+
+    - Case 2: If no two of {x, y, z} are connected in G → they form a triangle in Ḡ
+
+#### Subdivisions
+Subdividing an edge means replacing it with a path of length 2 by adding a new vertex in the middle. <br>
+
+**Example**: If you have a direct road between two cities, subdividing would be like adding a rest stop in the middle - now you have two road segments instead of one direct route.
+
+<p align="center">
+    <img src="Media\Lecture2\subdivisions.png" width="" /> <br>
+</p>
+
+#### Edge Contraction
+Contracting an edge means merging its two endpoints into a single vertex. <br>
+
+**Example**: Think of merging two neighboring cities into one metropolitan area - all roads that led to either city now lead to the merged city.
+
+<p align="center">
+    <img src="Media\Lecture2\edge_contraction.png" width="" /> <br>
+</p>
+
+### Graph Isomorphism
+- Two graphs are **isomorphic** if they have the same structure, even if their vertices have different labels. It's like having two identical puzzles with different colored pieces - the shape and connections are the same. $(G₁ ≅ G₂)$
+
+- Determining if two graphs are isomorphic is surprisingly difficult - no efficient algorithm is known, making it one of computer science's famous unsolved problems.
+
+- Some special graphs look identical to their complement. The 5-vertex cycle (C₅) is an example it has the same structure as its complement. These are called self **complementary graphs**.
+
+
+<p align="center">
+    <img src="Media\Lecture2\isomorphism.png" width="" /> <br>
+</p>
+
+### Corollary 2.6.1
+**Statement:** The isomorphism relation is an equivalence relation on the set of graphs. <br>
+
+**Proof:** <br>
+For any relation to be called an "equivalence relation," it must satisfy three properties <br>
+
+- Reflexive Property Rule: Every graph is isomorphic to itself. <br>
+    - Simple explanation: A graph has the same structure as itself (obviously!)
+
+- Symmetric Property Rule: If graph A is isomorphic to graph B, then graph B is isomorphic to graph A.
+
+- Transitive Property Rule: If graph A is isomorphic to graph B, AND graph B is isomorphic to graph C, then graph A is isomorphic to graph C.
+
+<br>
+
+**Why This Matters**
+This lemma is important because it means we can group graphs into equivalence classes - collections of graphs that all have the same structure. Within each class, all graphs are isomorphic to each other.
+We need to do less caclulations in that case.
+
+### Degree Sequence
+
+- The **degree sequence** lists all vertex degrees in descending order. It's like a summary of how "popular" each vertex is in terms of connections.
+
+<p align="center">
+    <img src="Media\Lecture2\degree_seq1.png" width="" /> <br>
+    <em>Two degree equivalent graphs<em>
+</p>
+
+- **Graphic Sequence**: A sequence of numbers that can actually represent the degrees of vertices in some simple graph.
+
+    - **Example**: The sequence (3,3,2,2,2,0) is graphic because you can draw a graph where two vertices have degree 3, three vertices have degree 2, and one vertex has degree 0.
+    The sequence (5, 4, 3, 2, 1, 1) is not graphic sequence.
+
+<p align="center">
+    <img src="Media\Lecture2\degree_seq2.png" width="" /> <br>
+    <em>Not a graphic sequence<em>
+</p>
+
+
+#### Testing if a sequence is graphic
+- Havel and Hakimi showed that d is graphic if and only if d' (complement of d) is graphic.
+
+<p align="center">
+    <img src="Media\Lecture2\degree_seq3.png" width="" /> <br>
+</p>
+
+The **Havel-Hakimi algorithm** is a method for determining whether a given sequence of non-negative integers can represent the degree sequence of a simple graph (i.e., whether the sequence is "graphic"). <br>
+
+The algorithm works by repeatedly applying a reduction operation to test if a degree sequence is realizable as a simple graph. <br>
+
+**Input**: A sequence of non-negative integers d = (d₁, d₂, ..., dₙ) arranged in non-increasing order. <br>
+
+**Process**: <br>
+
+1. **Base Case**: If the sequence contains only zeros, then it's graphic (represents a null graph)
+2. **Reduction Step**:
+    - Take the largest degree d₁
+    - Remove d₁ from the sequence
+    - Subtract 1 from the next d₁ largest degrees in the sequence
+    - Rearrange the resulting sequence in non-increasing order
+3. **Repeat**: Continue this process until either:
+    - You get all zeros (sequence is graphic)
+    - You get negative numbers (sequence is not graphic)
+
+## Step-by-Step Example
+
+Let's test if the sequence (4,4,4,4,3,1) is graphic:
+
+**Step 1**: (4,4,4,4,3,1)
+
+- Remove first 4
+- Subtract 1 from next 4 elements: (4-1, 4-1, 4-1, 3-1, 1, 0) = (3,3,3,2,1,0)
+
+**Step 2**: (3,3,3,2,1,0)
+
+- Remove first 3
+- Subtract 1 from next 3 elements: (3-1, 3-1, 2-1, 1, 0) = (2,2,1,1,0)
+
+**Step 3**: (2,2,1,1,0)
+
+- Remove first 2
+- Subtract 1 from next 2 elements: (2-1, 1-1, 1, 0) = (1,0,1,0)
+- Rearrange: (1,1,0,0)
+
+**Step 4**: (1,1,0,0)
+
+- Remove first 1
+- Subtract 1 from next 1 element: (1-1, 0, 0) = (0,0,0)
+
+**Result**: All zeros → The sequence is **graphic**
+
+
+<p align="center">
+    <img src="Media\Lecture2\degree_seq4.png" width="" /> <br>
+    <em>A graphic sequence and a non-graphic sequence<em>
+</p>
 
 # Chapter 3
 To be added

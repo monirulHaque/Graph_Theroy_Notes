@@ -462,9 +462,9 @@ The algorithm works by repeatedly applying a reduction operation to test if a de
     - You get all zeros (sequence is graphic)
     - You get negative numbers (sequence is not graphic)
 
-## Step-by-Step Example
+**Step-by-Step Example** <br>
 
-Let's test if the sequence (4,4,4,4,3,1) is graphic:
+Let's test if the sequence (4,4,4,4,3,1) is graphic: <br>
 
 **Step 1**: (4,4,4,4,3,1)
 

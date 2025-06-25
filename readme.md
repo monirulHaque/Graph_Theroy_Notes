@@ -492,7 +492,6 @@ Let's test if the sequence (4,4,4,4,3,1) is graphic:
 
 <p align="center">
     <img src="Media\Lecture2\degree_seq4.png" width="" /> <br>
-    <em>A graphic sequence and a non-graphic sequence<em>
 </p>
 
 # Chapter 3

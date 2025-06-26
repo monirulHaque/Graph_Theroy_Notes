@@ -21,6 +21,17 @@ This repository contains my lecture notes of Graph Theory Topic. The notes mostl
       - [4. Path Graphs](#4-path-graphs)
       - [5. Cycle Graphs](#5-cycle-graphs)
       - [6. Wheel Graphs](#6-wheel-graphs)
+    - [Operations on Graphs](#operations-on-graphs)
+      - [Union of Graphs](#union-of-graphs)
+      - [Intersection of Graphs](#intersection-of-graphs)
+      - [Complement of Graphs](#complement-of-graphs)
+      - [Corollary 2.5.1](#corollary-251)
+      - [Subdivisions](#subdivisions)
+      - [Edge Contraction](#edge-contraction)
+    - [Graph Isomorphism](#graph-isomorphism)
+    - [Corollary 2.6.1](#corollary-261)
+    - [Degree Sequence](#degree-sequence)
+      - [Testing if a sequence is graphic](#testing-if-a-sequence-is-graphic)
 - [Chapter 3](#chapter-3)
 
 # Chapter 2
@@ -307,10 +318,10 @@ A graph is **regular** if all vertices have the *same degree*. Specific types in
 Let G₁ = (V₁, E₁) and G₂ = (V₂, E₂) be two graphs.
 
 #### Union of Graphs
-(G₁ ∩ G₂) = The resulting graph will contain all the vertices and edges of both graphs.
+(G₁ ∪ G₂) = The resulting graph will contain all the vertices and edges of both graphs.
 
 #### Intersection of Graphs
-(G₁ ∪ G₂) = The resulting graph will contain only the vertices and edges that are present in both graphs. <br>
+(G₁ ∩ G₂) = The resulting graph will contain only the vertices and edges that are present in both graphs. <br>
 
 
 <p align="center">

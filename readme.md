@@ -101,7 +101,7 @@ Chapter 2: Basic Graph Terminologies from the textbook Basic Graph Theory by Md.
   
 ---
 
-### Corollary 2.2.1
+### Lemma 2.2.1
 **Statement**: For any graph $G = (V, E)$ with $m$ edges, the sum of all vertex degrees equals $2m$: <br>
 
 $$
@@ -127,7 +127,7 @@ $$
 
 ---
 
-### Corollary 2.2.2
+### Lemma 2.2.2
 **Statement**: Every graph has an **even number of odd-degree vertices**. <br>
 - **Proof**:
     - Let $x$ = sum of even-degree vertices (even).
@@ -505,11 +505,98 @@ Let's test if the sequence (4,4,4,4,3,1) is graphic: <br>
     <img src="Media\Lecture2\degree_seq4.png" width="" /> <br>
 </p>
 
+### Graph Representation
+To be Added
+
 # Chapter 3
-To be added
 
+<p align="center">
+<img src="Media\Lecture1\multi_graph.png" width="" /> <br/>
+    <em>A multigraph example</em>
+</p>
 
+<p align="center">
+<img src="Media\Lecture3\chapt3_first_image.png" width="" /> <br>
+    <em>A simple graph example</em>
+<p align="center">
 
+### Walks
+A walk is a sequence of alternating vertices and edges where each edge connects consecutive vertices. It can repeat both vertices and edges. <br>
+For example: <br>
+In the multigraph example, v1, e1, v5, e5, v5, e5, v5, e8, v3; is a walk <br>
+In the simple graph example, a, (a,i), i, (i, h), h, (h, c), c, (c, b), b, (b, a), a; is a walk
+
+### Trails
+A trail is a walk in a graph where no edge is repeated, but vertices can be repeated.
+<br>
+For example: <br>
+In the multigraph example, v1, e1, v5, e5, v5, e8, v3, e7, v2, e6, v3; is a trail. <br>
+In the simple graph example, a, (a,i), i, (i, h), h, (h, c), c, (c, b), b, (b, a), a; is a trail.
+
+> A closed trail that starts and ends at the same vertex, with no repeated edges is called a **circuit**.
+
+### Paths
+A path is a walk with no repeated vertices.
+<br>
+For example: <br>
+In the multigraph example, v1, e1, v5, e8, v3, e7, v2; is a path. <br>
+In the simple graph example, a, (a,i), i, (i, h), h, (h, c), c, (c, b), b, (b, a), a; is a path.
+
+### Cycles
+A Cycle is a path except start and end vertex is same.
+<br>
+For example: <br>
+In the multigraph example, v1, e1, v5, e8, v3, e7, v2, e3, v1; is a cycle. <br>
+In the simple graph example, a, (a,i), i, (i, h), h, (h, c), c, (c, b), b, (b, a), a; is a cycle.
+
+#### Lemma 3.1.1 
+**Statement:** Every u,v-walk contains a u,v-path <br>
+- Meaning that, if you walk from u to v even with a lot of cycles in between u and v, there's always a direct path from u to v without any detours.
+
+**Proof:** <br>
+- If the walk has no repeated vertices → it's already a path.
+- If the walk has repeated vertices → remove the "loop" between repeated occurrences. This creates a shorter walk that still connects u to v.
+
+### Graph Connectivity/Connected Components
+- Connected Graph: You can travel between any two vertices
+- Disconnected Graph: Some vertices are unreachable from others
+
+<p align="center">
+<img src="Media\Lecture1\graph_connectivity.png" width="" />
+<p align="center">
+
+#### Lemma 3.1.2
+**Statement:** Every graph with n vertices and m edges has at least n − m connected component. <br.>
+- Basically ``Components ≥ n - m``
+**Proof:** <br>
+- Base case: A graph with n vertices and 0 edges has n components (each vertex is isolated)
+- Each time we add an edge, we can decrease the number of components by at most 1. (Either the edge connects two components into one or the edge connects two vertices in the same component)
+- So, After adding m edges: components ≥ n - m
+
+#### Lemma 3.1.3
+**Statement:** Let G be a simple graph of n vertices. If G has exactly k components, then the number m of edges of G satisfies <br>
+$n − k ≤ m ≤ (n − k)(n − k + 1)/2$ <br>
+
+**Lower Bound Proof (n - k ≤ m):** <br>
+- If we remove any edge from a graph with minimum edges, components must increase.
+
+**Upper Bound Proof (m ≤ (n-k)(n-k+1)/2):**
+- To maximize edges with k components, make one component as large as possible
+- Optimal configuration: one complete graph with (n-k+1) vertices + (k-1) isolated vertices
+- Maximum edges = (n-k)(n-k+1)/2   {We know these from complete graph}
+
+### Cut-Edges
+An edge is a cut edge if removing it disconnects the component. Removing cut-edges increases the number of components.
+
+#### Lemma 3.1.4
+**Statement:**  An edge is a cut-edge if and only if it belongs to no cycle.<br>
+
+- Think of this like bridges in a city. A bridge is critical (a cut-edge) only if there's no alternative route around it.
+
+**Proof:**
+- If we remove edge (x,y) and vertices x and y are still connected
+- There must be an alternative path P from x to y
+- This path P + the original edge (x,y) forms a cycle
 
 
 

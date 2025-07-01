@@ -7,8 +7,8 @@ This repository contains my lecture notes of Graph Theory Topic. The notes mostl
     - [Graph Definition](#graph-definition)
     - [Basic Graph Types](#basic-graph-types)
     - [Key Relationships](#key-relationships)
-    - [Corollary 2.2.1](#corollary-221)
-    - [Corollary 2.2.2](#corollary-222)
+      - [Lemma 2.2.1](#lemma-221)
+      - [Lemma 2.2.2](#lemma-222)
       - [Maximum and Minimum Degree](#maximum-and-minimum-degree)
       - [Regular Graphs](#regular-graphs)
     - [Corollary 2.2.3](#corollary-223)
@@ -32,7 +32,18 @@ This repository contains my lecture notes of Graph Theory Topic. The notes mostl
     - [Corollary 2.6.1](#corollary-261)
     - [Degree Sequence](#degree-sequence)
       - [Testing if a sequence is graphic](#testing-if-a-sequence-is-graphic)
+    - [Graph Representation](#graph-representation)
 - [Chapter 3](#chapter-3)
+    - [Walks](#walks)
+    - [Trails](#trails)
+    - [Paths](#paths)
+    - [Cycles](#cycles)
+      - [Lemma 3.1.1](#lemma-311)
+    - [Graph Connectivity/Connected Components](#graph-connectivityconnected-components)
+      - [Lemma 3.1.2](#lemma-312)
+      - [Lemma 3.1.3](#lemma-313)
+    - [Cut-Edges](#cut-edges)
+      - [Lemma 3.1.4](#lemma-314)
 
 # Chapter 2
 
@@ -101,7 +112,7 @@ Chapter 2: Basic Graph Terminologies from the textbook Basic Graph Theory by Md.
   
 ---
 
-### Lemma 2.2.1
+#### Lemma 2.2.1
 **Statement**: For any graph $G = (V, E)$ with $m$ edges, the sum of all vertex degrees equals $2m$: <br>
 
 $$
@@ -127,7 +138,7 @@ $$
 
 ---
 
-### Lemma 2.2.2
+#### Lemma 2.2.2
 **Statement**: Every graph has an **even number of odd-degree vertices**. <br>
 - **Proof**:
     - Let $x$ = sum of even-degree vertices (even).

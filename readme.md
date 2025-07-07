@@ -11,8 +11,8 @@ This repository contains my lecture notes of Graph Theory Topic. The notes mostl
       - [Lemma 2.2.2](#lemma-222)
       - [Maximum and Minimum Degree](#maximum-and-minimum-degree)
       - [Regular Graphs](#regular-graphs)
-    - [Corollary 2.2.3](#corollary-223)
-    - [Corollary 2.2.4](#corollary-224)
+      - [Corollary 2.2.3](#corollary-223)
+      - [Corollary 2.2.4](#corollary-224)
     - [Subgraphs](#subgraphs)
     - [Key Graph Classes](#key-graph-classes)
       - [1. Null Graphs](#1-null-graphs)
@@ -25,14 +25,19 @@ This repository contains my lecture notes of Graph Theory Topic. The notes mostl
       - [Union of Graphs](#union-of-graphs)
       - [Intersection of Graphs](#intersection-of-graphs)
       - [Complement of Graphs](#complement-of-graphs)
-      - [Corollary 2.5.1](#corollary-251)
+        - [Lemma 2.5.1](#lemma-251)
       - [Subdivisions](#subdivisions)
       - [Edge Contraction](#edge-contraction)
     - [Graph Isomorphism](#graph-isomorphism)
-    - [Corollary 2.6.1](#corollary-261)
+    - [Lemma 2.6.1](#lemma-261)
     - [Degree Sequence](#degree-sequence)
       - [Testing if a sequence is graphic](#testing-if-a-sequence-is-graphic)
     - [Graph Representation](#graph-representation)
+      - [Adjacency Matrix](#adjacency-matrix)
+      - [Indicence Matrix](#indicence-matrix)
+      - [Adjacency List](#adjacency-list)
+    - [Exercise](#exercise)
+      - [Graph Drawing](#graph-drawing)
 - [Chapter 3](#chapter-3)
     - [Walks](#walks)
     - [Trails](#trails)
@@ -200,7 +205,7 @@ A graph is **regular** if all vertices have the *same degree*. Specific types in
 
 ---
 
-### Corollary 2.2.3
+#### Corollary 2.2.3
 **Statement**: Every regular graph with an odd degree has an even number of vertices. <br>
 - **Proof**:
   - **Handshaking Lemma**: In any graph, the sum of all vertex degrees equals twice the number of edges. This sum is always **even** because it's $2 \times \text{edges}$
@@ -223,7 +228,7 @@ A graph is **regular** if all vertices have the *same degree*. Specific types in
 
 ---
 
-### Corollary 2.2.4
+#### Corollary 2.2.4
 **Statement**: A $k$-regular graph with $n$ vertices has $\frac{nk}{2}$ edges. <br>
 - **Proof**:
   - **Sum of degrees**: In a $k$-regular graph, the sum of all vertex degrees is $n \times k$ (since each of $n$ vertices has degree $k$).
@@ -374,7 +379,7 @@ versa.
     <img src="Media\Lecture2\complement_graph.png" width="" /> <br>
 </p>
 
-#### Corollary 2.5.1
+##### Lemma 2.5.1
 
 **Statement:** For any graph G with 6 vertices, either G or Ḡ contains a triangle (3-cycle). (Also called Ramsey's Triangle Theory) <br>
 
@@ -420,7 +425,7 @@ Contracting an edge means merging its two endpoints into a single vertex. <br>
     <img src="Media\Lecture2\isomorphism.png" width="" /> <br>
 </p>
 
-### Corollary 2.6.1
+### Lemma 2.6.1
 **Statement:** The isomorphism relation is an equivalence relation on the set of graphs. <br>
 
 **Proof:** <br>
@@ -517,7 +522,55 @@ Let's test if the sequence (4,4,4,4,3,1) is graphic: <br>
 </p>
 
 ### Graph Representation
-To be Added
+#### Adjacency Matrix
+
+- Space Complexity O(n<sup>2</sup>) {where n = nodes, m = edges}
+- Can not store multigraph
+- Maximum possible edges = n(n − 1)/2 in a simple graph; so if there are not many edges using it is not economical.
+
+<p align="center">
+    <img src="Media\Lecture2\Adjacency_Matrix.png" width="" /> <br>
+</p>
+
+#### Indicence Matrix
+
+- Space Complexity O(nm) {where n = nodes, m = edges}
+- For a graph which contains much more number of edges compared to nodes, it's a bad choice.
+- However, it's used in network theory for the query to know whether a vertex is incident to an edge or not in O(1) time.
+
+<p align="center">
+    <img src="Media\Lecture2\Adjacency_and_Indicency_List.png" width="" /> <br>
+    <em>Indicence Matrix and Adjacency List</em>
+</p>
+
+#### Adjacency List
+
+- Space Complexity O(n+m) {where n = nodes, m = edges}
+- It's the most economical and practical representation
+
+### Exercise
+#### Graph Drawing
+
+<details>
+<summary>
+<span style="font-size:1rem">Construct these graphs of K<sub>3,3</sub>, W<sub>5</sub>, and C<sub>5</sub></span>
+</summary>
+<br>
+<p align="center">
+  <img src="Media\Lecture1\solve4.png" width="500"/>
+</p>
+</details>
+
+<details>
+<summary>
+<span style="font-size:1rem">Construct the complement graphs of K<sub>3,3</sub>, W<sub>5</sub>, and C<sub>5</sub></span>
+</summary>
+<br>
+<p align="center">
+  <img src="Media\Lecture1\solve4.png" width="500"/>
+</p>
+</details>
+
 
 # Chapter 3
 

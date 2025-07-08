@@ -38,6 +38,7 @@ This repository contains my lecture notes of Graph Theory Topic. The notes mostl
       - [Adjacency List](#adjacency-list)
     - [Exercise](#exercise)
       - [Graph Drawing](#graph-drawing)
+      - [Proofs/Short Explanation questions](#proofsshort-explanation-questions)
 - [Chapter 3](#chapter-3)
     - [Walks](#walks)
     - [Trails](#trails)
@@ -553,7 +554,7 @@ Let's test if the sequence (4,4,4,4,3,1) is graphic: <br>
 
 <details>
 <summary>
-<span style="font-size:1rem">Construct these graphs of K<sub>3,3</sub>, W<sub>5</sub>, and C<sub>5</sub></span>
+<span style="font-size:1rem">Construct these graphs of K<sub>3,3</sub>, N<sub>6</sub>, P<sub>6</sub>, W<sub>5</sub>, and C<sub>5</sub></span>
 </summary>
 <br>
 <p align="center">
@@ -563,12 +564,123 @@ Let's test if the sequence (4,4,4,4,3,1) is graphic: <br>
 
 <details>
 <summary>
-<span style="font-size:1rem">Construct the complement graphs of K<sub>3,3</sub>, W<sub>5</sub>, and C<sub>5</sub></span>
+<span style="font-size:1rem">Construct the complement graphs of K<sub>3,3</sub>, N<sub>6</sub>, P<sub>6</sub>, W<sub>5</sub>, and C<sub>5</sub></span>
 </summary>
 <br>
 <p align="center">
   <img src="Media\Lecture1\solve4.png" width="500"/>
 </p>
+</details>
+
+<details>
+<summary>
+<span style="font-size:1rem">Construct a 1-regular graph and a 2-regular graph with 6 vertices</sub></span>
+</summary>
+<br>
+<p align="center">
+  <img src="Media\Lecture1\solve4.png" width="500"/>
+</p>
+</details>
+
+<details>
+<summary>
+<span style="font-size:1rem"> Construct a simple graph from this seuqence (5, 4, 2, 2, 2, 2, 1) if it's a graphic sequence</sub></span>
+</summary>
+<br>
+<p align="center">
+Checking if it's really a graphic sequence or not <br>
+(5, 4, 2, 2, 2, 2, 1) <br>
+=> (0, 3, 1, 1, 1, 1, 1) <br>
+=> (3, 1, 1, 1, 1, 1, 0) <br>
+=> (0, 0, 0, 0, 1, 1, 0) <br>
+=> (1, 1, 0, 0, 0, 0, 0) <br>
+=> (0, 0, 0, 0, 0, 0, 0)
+So, it's a graphic sequence
+</p>
+</details>
+
+
+<details>
+<summary>
+<span style="font-size:1rem">Draw the graph G = (V, E) with vertex set V = {a, b, c, d, e, f, g, h} and edge
+set{(a, b), (a, e), (b, c), (b, d), (c, d), (c, g), (d, e)(e, f ), ( f, g), ( f, h), (g, h)}.
+Draw G − (d, e). Draw the subgraph of G induced by {c, d, e, f }. Contract the
+edge (d, e) from G.</sub></span>
+</summary>
+<br>
+<p align="center">
+  <img src="Media\Lecture1\solve4.png" width="500"/>
+</p>
+</details>
+
+<details>
+<summary>
+<span style="font-size:1rem">Draw two self-complimentary graphs.</sub></span>
+</summary>
+<br>
+<p align="center">
+  <img src="Media\Lecture1\solve4.png" width="500"/>
+</p>
+</details>
+ 
+<details>
+<summary>
+<span style="font-size:1rem">Draw two graphs that are isomorphic to each other.</sub></span>
+</summary>
+<br>
+<p align="center">
+  <img src="Media\Lecture1\solve4.png" width="500"/>
+</p>
+</details>
+
+#### Proofs/Short Explanation questions
+
+<details>
+<summary>
+<span style="font-size:1rem"> Show that every regular graph with an odd degree has an even number of vertices</span>
+</summary>
+<br>
+<ul>
+<li>According to handshaking lemma, <br>
+Sum of all vertex degrees = 2m  {where m is number of edges} <br> </li>
+<li>We know that, <br>
+sum of degrees in a k-regular graph = n * k {where n = number of vertices and k = degree}</li>
+<li>So, n*k = 2m</li>
+<li>However, <br>
+Odd × Odd = Odd <br>
+Odd × Even = Even</li>
+</ul>
+<li>So, at least one of the n or k should be even. If k is odd, n must be even. (Proved)</li>
+</details>
+
+<details>
+<summary>
+<span style="font-size:1rem">  Can you construct a disconnected graph G of two or more vertices such that G is also disconnected. Give a proof supporting your answer</span>
+</summary>
+<br>
+</details>
+
+<details>
+<summary>
+<span style="font-size:1rem">What is the necessary and sufficient condition for K<sub>m,n</sub> to be a regular graph?</span>
+</summary>
+<br>
+</details>
+
+<details>
+<summary>
+<span style="font-size:1rem">Is there a simple graph of n vertices such that the vertices all have distinct degrees? Give a proof supporting your answer</span>
+</summary>
+<br>
+
+</details>
+
+<details>
+<summary>
+<span style="font-size:1rem">Show that two graphs are isomorphic if and only if their complements are isomorphic.</span>
+</summary>
+<br>
+
 </details>
 
 

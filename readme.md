@@ -774,6 +774,81 @@ An edge is a cut edge if removing it disconnects the component. Removing cut-edg
 - There must be an alternative path P from x to y
 - This path P + the original edge (x,y) forms a cycle
 
+### Eulerian Graphs
+- A trail in a connected graph is an Eulerian trail if it contains every edge exactly once.
+- A circuit in a connected graph is an Eulerian circuit if it contains every edge of the
+graph.
+- A connected graph with an Eulerian circuit is an Eulerian graph.
+
+
+#### Theorem 3.2.1
+**Statement** A connected graph G is Eulerian if and only if every vertex of G has even degree <br>
+
+**Proof:** <br>
+Necessity (⇒): <br>
+- If G is Eulerian, then it contains a closed trail (Eulerian circuit) using every edge exactly once.
+Every time you enter a vertex via an edge, you leave via another edge.
+- So, edges at each vertex come in pairs—thus, each vertex has even degree.
+
+Sufficiency (⇐): <br>
+If every vertex has even degree and G is connected:
+- Start at any vertex and construct a trail without repeating edges, always leaving a vertex via unused edge.
+- Trail ends at starting point (since degrees are even).
+- If all edges are used—done. If not, repeat the process at a vertex in the trail with unused edges.
+Merge cycles until all edges are used.
+Thus, an Eulerian circuit exists.
+
+#### Cycle Decomposition
+- A decomposition of a graph G is a partition of the edges of G: we split up the graph into many
+pieces that share no edges. We can think of the pieces as sets of edges (in which case their union
+as sets is E(G)) or as subgraphs (in which case their union as graphs is G).
+
+- A graph has a cycle decomposition if the graph can be expressed as a union of edge-disjoint cycles. 
+
+<p align="center">
+<img src="Media\Lecture3\Cycle decomposition.png" width="" />
+<p align="center">
+
+##### Lemma 3.2.2 (Cycle Decomposition Lemma)
+**Statement** A connected graph is Eulerian if and only if its edge set can be partitioned into cycles.
+
+- Euler circuit is a cycle decomposition; conversely, a cycle decomposition gives even degrees.
+
+### Hamiltonian Graphs
+- An Eulerian circuit visits each edge exactly once, but may visit some vertices more than once.
+- A path in G that includes every vertex of G is called a Hamiltonian path of G. A cycle in G that includes every vertex in G is called a Hamiltonian
+cycle of G. If G contains a Hamiltonian cycle, then G is called a Hamiltonian Graph. 
+- Every Hamiltonian cycle of a Hamiltonian graph of n vertices has exactly n vertices and n edges. 
+
+<p align="center">
+<img src="Media\Lecture3\hamiltonian_graphs.png" width="" />
+<p align="center">
+
+- No complete characterization is known for a graph to be a Hamiltonian graph.
+
+### Connectivity in Graphs
+- It is the smallest number of vertices you must remove to either disconnect the graph or reduce it to a single isolated vertex.
+- Connectivity (κ(G)) measures how "strongly" a graph is held together.
+
+<p align="center">
+<img src="Media\Lecture3\connectivity.png" width="" />
+<p align="center">
+- A graph G is k-connected if κ(G) ≥ k. The example is 1-connected graph.
+- A separating set or a vertex cut of a connected graph G is a set S ⊂ V(G) such that G − S has more than one component.
+  - If a vertex cut contains exactly one vertex, then we call the vertex cut a cut vertex.
+  - If a vertex cut in a 2-connected graph contains exactly two vertices, then we call the two vertices a separation-pair.
+
+
+<br>
+- The edge connectivity κ'(G) of a connected graph G is the minimum number of edges whose removal results in a disconnected graph.
+  - A graph is k-edge-connected if κ'(G) ≥ k. A disconnecting set of edges in a connected graph is a set F ⊆ E(G)such that G − F has more than one component. 
+  - If a disconnecting set contains exactly one edge, it is called a bridge. 
+  - For two disjoint subsets S and T of V(G), we denote [S, T ] the set of edges which have one endpoint in S and the other in T . An edge cut is an edge set of the form [S, S'], where S is a nonempty proper subset of V(G) and S' denotes V(G) − S.
+
+#### Lemma 3.4.1 
+**Statement:** Let G be a connected simple graph, then κ(G) ≤ κ'(G) ≤ δ(G).
+
+
 
 
 <!-- - Kadane's Algorithm
